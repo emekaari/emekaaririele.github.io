@@ -70,7 +70,6 @@ h2 { font-size:18px; color:#0b3d91; }
     color:#0b3d91;
 }
 
-/* CARDS */
 .card {
     border:1px solid #eee;
     padding:15px;
@@ -78,7 +77,6 @@ h2 { font-size:18px; color:#0b3d91; }
     margin-bottom:10px;
 }
 
-/* SKILLS */
 .skills {
     display:flex;
     flex-wrap:wrap;
@@ -109,40 +107,46 @@ h2 { font-size:18px; color:#0b3d91; }
     ₦26.5B → ₦44B Revenue Expansion | Telecom & Enterprise B2B Markets
 </div>
 
-<!-- CONTACT SYSTEM -->
+<!-- CONTACT SYSTEM (TRACKED) -->
 <a class="button"
-   href="mailto:emeka.aririele@yahoo.com?subject=Executive%20Revenue%20Leadership%20Discussion&body=Hello%20Emeka,%0A%0AI%20would%20like%20to%20discuss%20a%20senior%20revenue%20leadership%20opportunity.">
-   Email Me
+   href="mailto:emeka.aririele@yahoo.com?subject=Executive%20Revenue%20Leadership"
+   onclick="track('email')">
+Email Me
 </a>
 
 <a class="button secondary"
    href="https://wa.me/2348032006573"
+   onclick="track('whatsapp')"
    target="_blank">
-   WhatsApp
+WhatsApp
 </a>
 
 <a class="button secondary"
    href="https://www.linkedin.com/in/emekaaririele/"
+   onclick="track('linkedin')"
    target="_blank">
-   LinkedIn
+LinkedIn
 </a>
 
 <a class="button secondary"
    href="https://calendly.com/emeka-aririele/30min"
+   onclick="track('calendly')"
    target="_blank">
-   Book Call
+Book Call
 </a>
 
 <a class="button secondary"
-   href="Emeka-Aririele-CV.pdf"
+   href="./Emeka_Aririele_Resume.pdf"
+   onclick="track('resume')"
    target="_blank">
-   Download Resume
+Download Resume
 </a>
 
 <a class="button secondary"
    href="https://www.credly.com/users/emeka-aririele/badges"
+   onclick="track('credly')"
    target="_blank">
-   Credly Certifications
+Credly
 </a>
 
 </header>
@@ -151,4 +155,106 @@ h2 { font-size:18px; color:#0b3d91; }
 <div class="section">
     <h3>Executive Summary</h3>
     <p>
-        Revenue Growth & Commercial Strategy Leader with 10+ years experience
+        Revenue Growth & Commercial Strategy Leader with 10+ years experience across telecom and B2B enterprise markets.
+        Focused on scalable revenue systems, enterprise sales execution, and commercial transformation.
+    </p>
+</div>
+
+<!-- CORE SKILLS -->
+<div class="section">
+    <h3>Core Expertise</h3>
+
+    <div class="skills">
+        <div class="skill">Revenue Strategy</div>
+        <div class="skill">Enterprise Sales</div>
+        <div class="skill">Business Development</div>
+        <div class="skill">Commercial Execution</div>
+        <div class="skill">Pipeline Management</div>
+        <div class="skill">Strategic Partnerships</div>
+    </div>
+</div>
+
+<!-- IMPACT -->
+<div class="section">
+    <h3>Key Impact</h3>
+
+    <div class="card">
+        ₦26.5B → ₦44B revenue growth delivered through structured enterprise execution
+    </div>
+
+    <div class="card">
+        Built scalable commercial pipelines across telecom and B2B ecosystems
+    </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section">
+    <h3>Experience</h3>
+
+    <div class="card">Remote Telecom & B2B Sales Consultant (Self-Employed)</div>
+    <div class="card">Business Development Manager – Jetlink Limited</div>
+    <div class="card">Senior Sales & Marketing Manager – Unbeatable Communication</div>
+</div>
+
+<!-- TARGET ACCOUNTS -->
+<div class="section">
+    <h3>Target Executive Accounts</h3>
+
+    <div class="card">
+        MTN Group (Enterprise Sales / Revenue Leadership)<br>
+        Airtel Africa<br>
+        Globacom<br>
+        9mobile<br>
+        Huawei Nigeria (Enterprise Solutions)
+    </div>
+</div>
+
+<!-- ANALYTICS DASHBOARD -->
+<div class="section">
+    <h3>Recruiter Engagement Analytics</h3>
+
+    <div class="card" id="analyticsBox">Loading analytics...</div>
+
+</div>
+
+</div>
+
+<script>
+
+// ========================
+// SIMPLE ANALYTICS ENGINE
+// ========================
+
+let data = JSON.parse(localStorage.getItem("engagement") || "{}");
+
+function track(action) {
+    data[action] = (data[action] || 0) + 1;
+    localStorage.setItem("engagement", JSON.stringify(data));
+    render();
+}
+
+function render() {
+    document.getElementById("analyticsBox").innerHTML = `
+        Email Clicks: ${data.email || 0}<br>
+        WhatsApp Clicks: ${data.whatsapp || 0}<br>
+        LinkedIn Clicks: ${data.linkedin || 0}<br>
+        Resume Clicks: ${data.resume || 0}<br>
+        Calendly Clicks: ${data.calendly || 0}<br>
+        Credly Clicks: ${data.credly || 0}<br>
+        <hr>
+        <b>Intent Score: ${
+            (data.email||0)*2 +
+            (data.whatsapp||0)*5 +
+            (data.linkedin||0)*3 +
+            (data.resume||0)*6 +
+            (data.calendly||0)*8
+        }</b>
+    `;
+}
+
+render();
+
+</script>
+
+</body>
+</html>
