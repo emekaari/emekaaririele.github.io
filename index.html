@@ -1,73 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emeka Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emeka | Commercial Strategy Leader</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <h2>Emeka</h2>
-
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container nav">
+    <h2 class="logo">Emeka</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#impact">Impact</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Hi, I'm Emeka 👋</h1>
-  <p>Frontend Developer building modern websites.</p>
+  <div class="container hero-box">
 
-  <div class="buttons">
-    <a href="#projects" class="btn">View Projects</a>
-    <a href="#contact" class="btn-outline">Contact Me</a>
+    <h1>Commercial Strategy & Communication Leader</h1>
+
+    <p>
+      I help organizations improve revenue performance through enterprise messaging,
+      sales enablement systems, and strategic communication design.
+      10+ years experience across telecom, fintech-adjacent, and B2B environments.
+    </p>
+
+    <div class="cta">
+      <a class="btn" href="#contact">Book a Call</a>
+      <a class="btn-outline" href="cv.pdf" download>Download CV</a>
+    </div>
+
+    <div class="stats">
+      <div><h3>10+</h3><p>Years Experience</p></div>
+      <div><h3>B2B</h3><p>Enterprise Focus</p></div>
+      <div><h3>Remote</h3><p>Available</p></div>
+    </div>
+
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="section">
-  <h2>About Me</h2>
+  <div class="container glass">
+    <h2>About Me</h2>
 
-  <p>
-    I am passionate about frontend development and creating responsive websites.
-  </p>
+    <p>
+      Senior commercial and business communication leader specializing in enterprise messaging,
+      sales enablement systems, and strategic communication frameworks that improve clarity,
+      alignment, and revenue performance.
+    </p>
+  </div>
 </section>
 
-<section id="projects" class="section">
-  <h2>Projects</h2>
+<!-- EXPERTISE -->
+<section id="expertise" class="section dark">
+  <div class="container">
+    <h2 class="center">Core Expertise</h2>
 
-  <div class="projects">
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Personal portfolio built with HTML and CSS.</p>
-    </div>
-
-    <div class="card">
-      <h3>Todo App</h3>
-      <p>Task manager using JavaScript.</p>
-    </div>
-
-    <div class="card">
-      <h3>Landing Page</h3>
-      <p>Responsive landing page design.</p>
+    <div class="grid">
+      <div class="card">Enterprise Messaging</div>
+      <div class="card">Sales Enablement</div>
+      <div class="card">Revenue Strategy</div>
+      <div class="card">Business Storytelling</div>
+      <div class="card">Partner Development</div>
+      <div class="card">AI Content Systems</div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>youremail@example.com</p>
+<!-- IMPACT -->
+<section id="impact" class="section">
+  <div class="container">
+    <h2 class="center">Impact Highlights</h2>
+
+    <div class="case">
+      Built structured enterprise messaging frameworks improving alignment across commercial teams.
+    </div>
+
+    <div class="case">
+      Strengthened sales enablement systems supporting revenue growth and client engagement.
+    </div>
+
+    <div class="case">
+      Designed communication workflows that improved execution speed and consistency.
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+  <div class="container glass center">
+    <h2>Let’s Work Together</h2>
+
+    <p>Open to remote opportunities in commercial strategy and communication leadership.</p>
+
+    <div class="cta">
+      <a class="btn" href="mailto:yourname@email.com">Email Me</a>
+      <a class="btn-outline" href="https://calendly.com" target="_blank">Schedule Call</a>
+    </div>
+
+    <p class="email">yourname@email.com</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Emeka</p>
+  <p>© 2026 Emeka — Built for remote opportunities.</p>
 </footer>
 
 </body>
